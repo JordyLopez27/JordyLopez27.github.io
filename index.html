@@ -20,11 +20,21 @@ var="author"
 <!--#include virtual="/head.html"-->
 <style type="text/css">
 
-body {background-color: whitesmoke;}
+body {
+  padding: 25px;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 25px;
+}
 .contactsearch {
  visibility:hidden;
 }
 
+.dark-mode {
+  background-color: black;
+  color: whitesmoke;
+}
+  
 h1 {color: Maroon;}
 </style>
 </head>
@@ -194,5 +204,13 @@ h1 {color: Maroon;}
 
 <!-- ===================== END YOUR CONTENT HERE ===================== -->
 <!--#include virtual="/includes/footerSubpage.inc.html" -->
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
 </body>
 </html>
