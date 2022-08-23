@@ -16,6 +16,10 @@ var="author"
  value="YOUR NAME, Department of Mathematics, Texas A&amp;M University"
 -->
 
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+
+<div id="Home" class="tabcontent">
 <head>
 <!--#include virtual="/head.html"-->
 <style type="text/css">
@@ -219,3 +223,10 @@ function myFunction() {
 </script>
 </body>
 </html>
+</div>
+
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
