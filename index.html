@@ -13,11 +13,11 @@ body {
   padding: 25px;
   background-color: whitesmoke;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
 }
 .contactsearch {
  visibility:hidden;
-}
+} 
 
 .dark-mode {
   background-color: black;
@@ -28,21 +28,13 @@ h1 {color: Maroon;}
 </style>
 </head>
 
-  
-  <!-- BEGIN CONTENT HERE -->
+<!-- BEGIN CONTENT HERE -->
 
-<script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
-<h1 class="pageTitle" style="text-align:center;">Jordy Cheyem Lopez Garcia, Ph.D. Student</h1>
-
+<h1 class="pageTitle" style="text-align:center;">Jordy Cheyem Lopez Garcia</h1>
 
 <div>
 <!-- Photograph -->
-<img src="jordy_photo.jpeg" width="15%" alt="jordy_photo.jpeg"
+<img class="img-responsive" src="jordy_photo.jpeg" width="15%" alt="jordy_photo.jpeg"
      style="position:relative;float:left;padding-right:5px;padding-top:5px;"/>
 <!-- Contact info -->
 <table>
@@ -68,6 +60,15 @@ function myFunction() {
 </table>
 </div>
 
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
 <!-- Break -->
 <p><br style="clear: both;"/></p>
 
@@ -88,8 +89,6 @@ function myFunction() {
         </tbody>
     </table>
 
-
-<!-- Talk about current activities, like GAS, DRP, AWM Peer Mentor, AMS, Diversity Club, Research Group with Frank Sottile, presenting at the island for SIAM and any others? -->
 
   <h2>About Me</h2> 
 
@@ -127,80 +126,6 @@ function myFunction() {
 
 <p style="font-size:20px">Together with Anne Shiu and <a href="https://www.math.tamu.edu/directory/formalpg.php?user=mae4102">Angelique Morvant</a>, I organize the <a href="https://www.math.tamu.edu/undergraduate/drp/">Directed Reading Program</a> at Texas A&M. Moreover, together with <a href="https://arpan-pal.github.io/">Arpan Pal</a>, I organize the Graduate Algebra Symposium between UT Arlington, The University of North Texas and The University of Oklahoma.</p>
 </tbody>
-
-
-<!--
-
-<h2>Current Teaching</h2>
-
-
-  Link to your teaching pages.
-  Create new sub directories mathMMM_2014c and mathNNN_2014a
-  under your public_html directory for Fall and Spring, 2014,
-  respectively.  Create index.html files in each directory.
-  
-<li><a href="mathMMM_2014c/">MATH 150, Fall 2021</a></li>
-<li><a href="mathNNN_2014a/">MATH 140, Summer 2021</a></li>
-<li><a href="mathMMM_2014c/">MATH 152, Spring 2021</a></li>
-
-<h3>Past Teaching</h3>
--->
-
-
-
-
-
-<!--
-
-<h3>Research Interests</h3>
-<ul style="margin-top: 2px">  
-<li>Algebraic Geometry and Applications</li>
-<li>Motivic Geometry and Motivic Homotopy Theory</li>
-<li>Category Theory and Applications</li>
-</ul>
-
-
-
-
-<h3>Pre-prints</h3>
-<ul style="margin-top: 2px">
-<li>Pre-print 1</li>
-<li>Pre-print 2</li>
-</ul>
-
--->
-
-
-
-<!-- ==================== External Personal Pages ====================  -->
-<!-- == It's your call on how much personal information to put here == -->
-
-<!-- 
-
-<h3>Personal</h3>
-<ul style="margin-top: 2px">
-<li><a href="http://www.facebook.com/YOUR_FB_PAGE">My Facebook Page</a></li>
-<li><a href="http://www.twitter.com/YOUR_TW_PAGE">My Twitter Page</a></li>
-</ul> 
-
--->
-
-<!--
-======= Remove next line when you've customized your page. ====== 
-<! -- <p><i>This is a template web page for the user.</i></p> -->
-
-
-<!-- ========== HTML Validator - You may remove this section ========= -->
-<p style="text-align:center">
-<a href="http://validator.w3.org/check?uri=referer"><img
-   src="http://www.w3.org/Icons/valid-xhtml11"
-   alt="Valid XHTML 1.1" height="31" width="88" /></a>
-<a href="http://jigsaw.w3.org/css-validator/check/referer"><img
-   style="border:0;width:88px;height:31px"
-   src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-   alt="Valid CSS!"/></a>
-</p>
-
 
 <!-- ===================== END YOUR CONTENT HERE ===================== -->
 </body>
