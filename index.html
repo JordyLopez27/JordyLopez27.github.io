@@ -15,17 +15,23 @@ body, html {
 }
 
 /* Style tab links */
+.tab-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgb(12, 35, 64);
+  width: 100%;
+}
+
 .tablink {
   background-color: rgb(12, 35, 64);
   color: white;
-  float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 16px;
-  width: 20%;
-  margin-bottom: 30px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
 }
 
  a:link {
@@ -66,8 +72,9 @@ a:active {
 #Home
 #Research 
 #Talks 
-#Teaching 
-#Service 
+#Teaching
+#Service
+#Seminar 
 
 @media only screen and (max-width: 492px) {
   /* For mobile phones: */
@@ -80,17 +87,21 @@ a:active {
 </head>
 
 <body>
-<button class="tablink" onclick="openPage('Home', this, 'rgb(174, 145, 66)')" id="defaultOpen">Home</button>
-<button class="tablink" onclick="openPage('Research', this, 'rgb(174, 145, 66)')">Research</button>
-<button class="tablink" onclick="openPage('Talks', this, 'rgb(174, 145, 66)')">Talks</button>
-<button class="tablink" onclick="openPage('Teaching', this, 'rgb(174, 145, 66)')">Teaching</button>
-<button class="tablink" onclick="openPage('Service', this, 'rgb(174, 145, 66)')">Service</button>
+<div class="tab-container">
+  <button class="tablink" onclick="openPage('Home', this, 'rgb(174, 145, 66)')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('Research', this, 'rgb(174, 145, 66)')">Research</button>
+  <button class="tablink" onclick="openPage('Talks', this, 'rgb(174, 145, 66)')">Talks</button>
+  <button class="tablink" onclick="openPage('Teaching', this, 'rgb(174, 145, 66)')">Teaching</button>
+  <button class="tablink" onclick="openPage('Service', this, 'rgb(174, 145, 66)')">Service</button>
+ <!-- <button class="tablink" onclick="openPage('Seminar', this, 'rgb(174, 145, 66)')">ACMS Seminar</button>-->
+</div>
+
 
 <!-- Home Tab -->
 
 <div id="Home" class="tabcontent">
   
-      <h1 class="pageTitle" style="text-align:center;">Jordy Cheyem Lopez Garcia</h1>
+      <h1 class="pageTitle" style="text-align:left;">Jordy Cheyem Lopez Garcia</h1>
 
       <!-- Photograph -->
       <img class="img-responsive" src="jordy_photo.jpeg" width="20%" alt="jordy_photo.jpeg"
@@ -99,12 +110,12 @@ a:active {
       <!-- Contact info -->
       <table>
       <tr><!-- Office -->
-      <th style="font-size:20px">Office:</th>
-      <td style="font-size:20px">Blocker 619</td>
+      <!--<th style="font-size:20px">Office:</th>-->
+      <!--<td style="font-size:20px">Blocker 619</td>-->
       </tr>
       <tr><!-- Obfuscate your e-mail address to reduce spam -->
       <th style="font-size:20px">E-mail:</th>
-      <td style="font-size:20px">jordy.lopez@tamu.edu</td>
+      <td style="font-size:20px">jlopezga@nd.edu</td>
       </tr>
       </table>
 
@@ -215,17 +226,15 @@ a:active {
     </div>
 
 <!-- Teaching tab -->
-<div id="Teaching" class="tabcontent">
+<div id="Teaching" class="tabcontent" style="padding-bottom: 50px;">
   <ul style="margin-top: 2px">
 <font color = 'black'>
 
-  <p><b>Description of duties:</b> An <b>Instructor of Record</b> is completely in charge of a course. A <b>Teaching Assistant</b> is in charge of delivering quizzes and (for Math 150 - Math 152) teaching introductory Python to 3 course sections, each of approximately 30 students. Teaching assistants meet twice a week with each course section, outside of lectures. They are also in charge of partially grading homework assignments, quizzes, or exams. A <b>Help Session tutor</b> offers tutoring services for specific courses outside of the classroom. A <b>Grader</b> is in charge of grading homework assignments for an upper-level undergraduate or graduate mathematics course.</p>
-
   <h2>Current</h2>
 
- <!--   <h3>Texas A&M University</h3>-->
+  <h3>University of Notre Dame</h3>
 
-   <!-- <li style="font-size:20px">Grader, Math 308.  (Summer 2025).</li>-->
+    <li style="font-size:20px">Instructor, Nonlinear Dynamical Systems (Fall 2025).</li>
 
   <h2>Previous</h2>
 
@@ -311,7 +320,9 @@ a:active {
     
     <li style="font-size: 20px;">Instructor of Record, Advanced Mathematics (Fall 2016).</li>
 
+    <p><b>Description of duties:</b> An <b>Instructor of Record</b> is completely in charge of a course. A <b>Teaching Assistant</b> is in charge of delivering quizzes and (for Math 150 - Math 152) teaching introductory Python to 3 course sections, each of approximately 30 students. Teaching assistants meet twice a week with each course section, outside of lectures. They are also in charge of partially grading homework assignments, quizzes, or exams. A <b>Help Session tutor</b> offers tutoring services for specific courses outside of the classroom. A <b>Grader</b> is in charge of grading homework assignments for an upper-level undergraduate or graduate mathematics course.</p>
     </font>
+
     </div>
 
 <!-- Service tab -->
@@ -358,6 +369,32 @@ a:active {
     <li style="font-size:20px">Co-advisor (with Oleg Musin) of 9 undergraduate students, Fall 2018 and Spring 2019.</li>
     </font>
     </div>
+
+<!-- ACMS Seminar tab-->
+
+<!--<div id="Seminar" class="tabcontent">
+    <ul style="margin-top: 2px;">
+<font color = 'black'> 
+
+    <h2>Applied and Computational Mathematics and Statistics Graduate Student and Postdoc Seminar</h2> 
+    <h3>About the ACMS Graduate Student and Postdoc Seminar</h3>
+
+      <p>This seminar exists to encourage communication among students and to contribute to a social life in the department through cultural and scientific dialogue. We would like to provide an environment where students at the ACMS department can practice their presentation skills. It is our goal to be a source of support and information for all graduate students and postdocs at ACMS.</p>
+
+      <p>This seminar is for graduate students and postdocs. Volunteer to give a talk!</p>
+
+      <h3>Next Talk</h3>
+      <p>Speaker:</p>
+      <p>Time:</p>
+      <p>Location: 154 Hurley</p>
+      <p>Title:</p>
+      <p>Abstract</p>
+
+      <h3>Seminar Schedule</h3>
+      <p>During Fall 2025, the ACMS Graduate Student and Postdoc Seminar will meet on TBD in 154 Hurley (except when otherwise noted).</p>
+
+</font>   
+</div> -->
 
 <script>
 function openPage(pageName,elmnt,color) {
