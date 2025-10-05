@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Computational Algebraic Geometry — Spring 2026</title>
+  <meta name="description" content="Course page for Computational Algebraic Geometry (Spring 2026). Syllabus, schedule, assignments, resources, and software setup." />
+  <style>
+    :root{--accent:#1f6feb;--muted:#6b7280;--bg:#f8fafc;--card:#ffffff}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#0f172a}
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .title{font-size:1.6rem;font-weight:700}
+    .subtitle{color:var(--muted);font-size:0.95rem}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(6,8,15,0.08);margin-top:18px}
+    nav a{margin-right:12px;color:var(--accent);text-decoration:none;font-weight:600}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:8px;border-bottom:1px solid #eef2f7;text-align:left}
+    th{background:#fbfcfe;font-weight:700}
+    ul{margin:0 0 12px 18px}
+    .small{font-size:0.9rem;color:var(--muted)}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+    footer{color:var(--muted);font-size:0.9rem;margin-top:28px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace}
+  </style>
+  <!-- MathJax for nice math rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="title">Computational Algebraic Geometry — Spring 2026</div>
+        <div class="subtitle">Course code: TBD &middot; Meeting time: Tue/Thu 1:30–2:50pm &middot; Location: Room TBD</div>
+      </div>
+      <div style="text-align:right">
+        <div><strong>Instructor</strong></div>
+        <div class="small">Dr. Jordy Lopez Garcia</div>
+        <div class="small">Email: <a href="mailto:jordy@example.edu">jordy@example.edu</a></div>
+        <div class="small">Office: Math Building, Rm. 412</div>
+        <div class="small">Office hours: Tue 3:00–4:00pm, Wed 10:00–11:00am (or by appointment)</div>
+      </div>
+    </header>
+
+    <nav class="card">
+      <a href="#syllabus">Syllabus</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#assignments">Assignments</a>
+      <a href="#software">Software</a>
+      <a href="#reading">Reading</a>
+      <a href="#policies">Policies</a>
+    </nav>
+
+    <div class="grid">
+      <main>
+        <section id="syllabus" class="card">
+          <h2>Course description</h2>
+          <p>This course introduces computational techniques in algebraic geometry: Gröbner bases, elimination, resultants, primary decomposition, toric varieties and tropical methods, numerical algebraic geometry, and applications. Students will learn both symbolic and numerical tools (Macaulay2, Singular, Bertini, Gfan, polymake, SageMath) and apply them to research-type problems.</p>
+
+          <h3>Learning outcomes</h3>
+          <ul>
+            <li>Use Gröbner bases to solve polynomial systems and perform elimination.</li>
+            <li>Understand computational approaches to schemes and varieties: primary decomposition, dimension, degree.</li>
+            <li>Apply numerical methods (homotopy continuation) to compute solution sets.</li>
+            <li>Use software packages (Macaulay2, Singular, Gfan, Bertini) effectively for experiments and research.</li>
+            <li>Read and present short research papers in computational algebraic geometry.</li>
+          </ul>
+
+          <h3>Prerequisites</h3>
+          <p>Basic algebra (graduate algebra or equivalent), linear algebra, and familiarity with programming (Python/command line) recommended.</p>
+
+          <h3>Grading</h3>
+          <ul>
+            <li>Homework / problem sets: 30%</li>
+            <li>Computational projects (2): 30% (15% each)</li>
+            <li>Presentations / participation: 10%</li>
+            <li>Final project/report: 30%</li>
+          </ul>
+
+          <h3>Assessment &amp; collaboration</h3>
+          <p>Collaboration is encouraged on computational exploration, but writeups must be your own. For programming/homework, you may discuss ideas and approaches but must list collaborators and provide your own solutions. Plagiarism will be handled according to university policy.</p>
+        </section>
+
+        <section id="schedule" class="card">
+          <h2>Course schedule (high-level)</h2>
+          <p class="small">Note: dates below are planned for Spring 2026. I will post a versioned schedule and reading list in the course repository; topic order may change slightly.</p>
+
+          <table>
+            <thead>
+              <tr><th>Week</th><th>Dates</th><th>Topics / lectures</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Jan 12–16</td><td>Introduction; polynomial rings, ideals, term orders</td></tr>
+              <tr><td>2</td><td>Jan 19–23</td><td>Gröbner bases: Buchberger's algorithm, S-polynomials</td></tr>
+              <tr><td>3</td><td>Jan 26–30</td><td>Applications: ideal membership, elimination, dimension</td></tr>
+              <tr><td>4</td><td>Feb 2–6</td><td>Primary decomposition; radicals; saturation</td></tr>
+              <tr><td>5</td><td>Feb 9–13</td><td>Toric varieties and monomial maps</td></tr>
+              <tr><td>6</td><td>Feb 16–20</td><td>Resultants and discriminants; elimination theory</td></tr>
+              <tr><td>7</td><td>Feb 23–27</td><td>Symbolic-numeric interface; certification</td></tr>
+              <tr><td>8</td><td>Mar 2–6</td><td>Numerical algebraic geometry: homotopy continuation</td></tr>
+              <tr><td>9</td><td>Mar 9–13</td><td>Software week: Macaulay2, Singular, Bertini hands-on</td></tr>
+              <tr><td>10</td><td>Mar 16–20</td><td>Spring break (no class)</td></tr>
+              <tr><td>11</td><td>Mar 23–27</td><td>Tropical geometry basics; Gfan and tropical computations</td></tr>
+              <tr><td>12</td><td>Mar 30–Apr 3</td><td>Polyhedral and combinatorial methods; polymake</td></tr>
+              <tr><td>13</td><td>Apr 6–10</td><td>Applications: kinematics, statistics, coding theory</td></tr>
+              <tr><td>14</td><td>Apr 13–17</td><td>Advanced topics: syzygies, free resolutions</td></tr>
+              <tr><td>15</td><td>Apr 20–24</td><td>Student presentations (project progress)</td></tr>
+              <tr><td>16</td><td>Apr 27–May 1</td><td>Final projects workshops; reproducibility and packaging</td></tr>
+              <tr><td>Exam</td><td>May 4–8</td><td>Final project reports due; final presentations / demo</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="assignments" class="card">
+          <h2>Assignments &amp; projects</h2>
+          <p>There will be regular problem sets with symbolic and computational parts. Two short computational projects (midterm-style) and a final project are required. Example project ideas:</p>
+          <ul>
+            <li>Compute tropicalization of a family of plane curves and compare with Newton polytope predictions.</li>
+            <li>Use homotopy continuation to solve a parametrized family of kinematic equations and analyse solution counts.</li>
+            <li>Implement an algorithm to compute primary decomposition for special classes of ideals and test on examples.</li>
+          </ul>
+          <p>All code should be version-controlled and reproducible; include README with instructions to run experiments. You may use GitHub/GitLab for submission and a short PDF report (5–8 pages).</p>
+        </section>
+
+        <section id="software" class="card">
+          <h2>Recommended software</h2>
+          <ul>
+            <li><strong>Macaulay2</strong> — symbolic computations in algebraic geometry. (https://faculty.math.illinois.edu/Macaulay2/)</li>
+            <li><strong>Singular</strong> — Gröbner bases and polynomial computations. (https://www.singular.uni-kl.de/)</li>
+            <li><strong>Bertini</strong> — numerical algebraic geometry / homotopy continuation. (https://bertini.nd.edu/)</li>
+            <li><strong>Gfan</strong> — tropical computations and Gröbner fans. (https://users-math.au.dk/jensen/software/gfan/)</li>
+            <li><strong>polymake</strong> — polyhedral computations used in tropical/toric work. (https://polymake.org/)</li>
+            <li><strong>SageMath</strong> — a Python-based environment that aggregates many tools. (https://www.sagemath.org/)</li>
+          </ul>
+          <p class="small">If you have trouble installing software, bring your laptop to office hours or use the provided lab machines. We will publish a step-by-step installer guide and example notebooks early in the semester.</p>
+        </section>
+
+        <section id="reading" class="card">
+          <h2>Primary &amp; suggested reading</h2>
+          <ul>
+            <li>Cox, Little, O'Shea — <em>Ideals, Varieties, and Algorithms</em> (for Gröbner bases and computational algebra).</li>
+            <li>D. Eisenbud — <em>Commutative Algebra with a View Toward Algebraic Geometry</em> (reference for algebraic foundations).</li>
+            <li>B. Sturmfels — <em>Solving Systems of Polynomial Equations</em> and <em>Gröbner Bases and Convex Polytopes</em> (combinatorial and computational perspective).</li>
+            <li>Software manuals and selected research papers (will be posted on the course site / repository).</li>
+          </ul>
+        </section>
+
+        <section id="policies" class="card">
+          <h2>Course policies</h2>
+          <h3>Late policy</h3>
+          <p>Homework: up to 48 hours late with a penalty of 10% per day, unless prior arrangements made. Projects: late penalties will be harsher; contact the instructor if you have an emergency.</p>
+          <h3>Accessibility &amp; accommodations</h3>
+          <p>If you need accommodations, please contact Disability Services and speak with the instructor as early as possible.</p>
+          <h3>Academic integrity</h3>
+          <p>All students are expected to follow the university's academic honesty policy. Collaboration is allowed on problem sets but each student must submit original writeups and list collaborators.</p>
+        </section>
+
+      </main>
+
+      <aside>
+        <section class="card">
+          <h3>Contact & quick links</h3>
+          <p class="small">Email: <a href="mailto:jordy@example.edu">jordy@example.edu</a></p>
+          <p class="small">Course GitHub: <a href="#">(link to be added)</a></p>
+          <p class="small">Syllabus PDF: <a href="#">Download</a></p>
+        </section>
+
+        <section class="card">
+          <h3>Office hours</h3>
+          <p>Tue 3:00–4:00pm, Wed 10:00–11:00am (or by appointment). In-person: Math Building Rm. 412. Remote: Zoom link posted in course repository.</p>
+        </section>
+
+        <section class="card">
+          <h3>Getting started</h3>
+          <ol>
+            <li>Install Macaulay2 or Singular (or use SageMath) before the first week.</li>
+            <li>Clone the course GitHub repository (link will be posted).</li>
+            <li>Read Chapters 1–3 of Cox, Little, O'Shea to refresh Gröbner bases basics.</li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h3>Announcements</h3>
+          <p class="small">Subscribe to course announcements on the LMS (or check the GitHub repo). Important changes to schedule or deadlines will be announced there.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="small">Last updated: Oct 5, 2025. If you notice an error or have a request for the syllabus, please contact the instructor.</div>
+    </footer>
+  </div>
+</body>
+</html>
