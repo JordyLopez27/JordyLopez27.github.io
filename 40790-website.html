@@ -10,8 +10,10 @@
     html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#0f172a}
     .container{max-width:1100px;margin:32px auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .title{font-size:1.6rem;font-weight:700}
+    .title{font-size:1.6rem;font-weight:700;margin-top:8px}
     .subtitle{color:var(--muted);font-size:0.95rem}
+    .image-banner{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .image-banner img{max-height:140px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
     .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(6,8,15,0.08);margin-top:18px}
     nav a{margin-right:12px;color:var(--accent);text-decoration:none;font-weight:600}
     .grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
@@ -25,12 +27,18 @@
     @media (max-width:900px){.grid{grid-template-columns:1fr}}
     code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace}
   </style>
-  <!-- MathJax for nice math rendering -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
+    <div class="image-banner">
+      <!-- Add your pictures here -->
+      <!-- Example: -->
+      <img src="jordy_photo.jpeg" alt="jordy">
+      <!-- Example: <img src="images/macaulay2.png" alt="Macaulay2 screenshot"> -->
+    </div>
+
     <header>
       <div>
         <div class="title">Computational Algebraic Geometry — Spring 2026</div>
@@ -44,7 +52,6 @@
         <div class="small">Office hours: TBD</div>
       </div>
     </header>
-
     <nav class="card">
       <a href="#syllabus">Syllabus</a>
       <a href="#schedule">Schedule</a>
